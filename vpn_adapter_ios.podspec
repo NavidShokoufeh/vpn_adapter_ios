@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'vpn_adapter_ios'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'Vpn utils for ios native'
   s.description      = <<-DESC
 Vpn utils for ios native.

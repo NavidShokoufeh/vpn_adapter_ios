@@ -12,17 +12,23 @@
 
 +(NSDictionary*)checkConnectParmer:(NodeModel*)modal {
     if([modal.nodeName isEqualToString:@"SSH"]) {
-        return @{@"type":@"sshtunnel",
-                 @"username":modal.username,
-                 @"password":modal.password,
-                 @"address":modal.server,
-                 @"port":modal.port,
-                 @"allowInsecure":@(modal.TLS),
-                 @"chap_enable":@(modal.CHAP),
-                 @"pap_enable":@(modal.PAP),
-                 @"mschap2_enable":@(modal.MSCHAP2),
-                 @"udpgw":modal.udpgw,
-                 @"udpgw_port":modal.udpgw_port,};
+        NSMutableDictionary *params = [@{
+            @"type": @"sshtunnel",
+            @"username": modal.username,
+            @"password": modal.password,
+            @"address": modal.server,
+            @"port": modal.port,
+        } mutableCopy];
+        
+        if (modal.udpgw) {
+            params[@"udpgw"] = modal.udpgw;
+        }
+        
+        if (modal.udpgw_port) {
+            params[@"udpgw_port"] = modal.udpgw_port;
+        }
+        return [params copy];
+        
     }else if([modal.nodeName isEqualToString:@"SSTP"]){
         return @{@"type":@"sstp",
                  @"username":modal.username,
