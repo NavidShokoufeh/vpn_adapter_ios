@@ -36,9 +36,6 @@ static NodeModel * modal = nil;
 }
 
 -(NSString*)udpgw_port {
-    if(_udpgw_port.length==0) {
-        return @"7300";
-    }
     return _udpgw_port;
 }
 
