@@ -18,6 +18,7 @@
             @"password": modal.password,
             @"address": modal.server,
             @"port": modal.port,
+            @"allowInsecure":@(modal.TLS),
         } mutableCopy];
         
         if (modal.udpgw) {
