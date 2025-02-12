@@ -31,7 +31,9 @@
         return [params copy];
         
      }else if([modal.nodeName isEqualToString:@"SSTP"]){
-        return @{@"type":@"sstp",
+
+         NSMutableDictionary *params = [@{
+                 @"type":@"sstp",
                  @"username":modal.username,
                  @"password":modal.password,
                  @"address":modal.server,
@@ -40,14 +42,25 @@
                  @"mschap2_enable":@(modal.MSCHAP2),
                  @"pap_enable":@(modal.PAP),
                  @"allowInsecure":@(modal.TLS),
-                 
-                 @"proxy_host":modal.proxy_host,
-                 @"proxy_port":modal.proxy_port,
-                 @"proxy_username":modal.proxy_username,
-                 @"proxy_password":modal.password,
-                };
+        } mutableCopy];
+
+         if (modal.proxy_host) {
+            params[@"proxy_host"] = modal.proxy_host;
+        }
+        
+        if (modal.proxy_port) {
+            params[@"proxy_port"] = modal.proxy_port;
+        }
+        if (modal.proxy_username) {
+            params[@"proxy_username"] = modal.proxy_username;
+        }
+        if (modal.proxy_password) {
+            params[@"proxy_password"] = modal.proxy_password;
+        }
+        return [params copy];
     }else if([modal.nodeName isEqualToString:@"openConnect"]){
-        return @{@"type":@"openconnect",
+       NSMutableDictionary *params = [@{
+                 @"type":@"sstp",
                  @"username":modal.username,
                  @"password":modal.password,
                  @"address":modal.server,
@@ -56,12 +69,22 @@
                  @"mschap2_enable":@(modal.MSCHAP2),
                  @"pap_enable":@(modal.PAP),
                  @"allowInsecure":@(modal.TLS),
-                 
-                 @"proxy_host":modal.proxy_host,
-                 @"proxy_port":modal.proxy_port,
-                 @"proxy_username":modal.proxy_username,
-                 @"proxy_password":modal.password,
-                 };
+        } mutableCopy];
+
+         if (modal.proxy_host) {
+            params[@"proxy_host"] = modal.proxy_host;
+        }
+        
+        if (modal.proxy_port) {
+            params[@"proxy_port"] = modal.proxy_port;
+        }
+        if (modal.proxy_username) {
+            params[@"proxy_username"] = modal.proxy_username;
+        }
+        if (modal.proxy_password) {
+            params[@"proxy_password"] = modal.proxy_password;
+        }
+        return [params copy];
     }
     return @{};
 }
