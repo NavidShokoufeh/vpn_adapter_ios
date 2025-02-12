@@ -30,7 +30,7 @@
         }
         return [params copy];
         
-    }else if([modal.nodeName isEqualToString:@"SSTP"]){
+     }else if([modal.nodeName isEqualToString:@"SSTP"]){
         return @{@"type":@"sstp",
                  @"username":modal.username,
                  @"password":modal.password,
@@ -40,6 +40,11 @@
                  @"mschap2_enable":@(modal.MSCHAP2),
                  @"pap_enable":@(modal.PAP),
                  @"allowInsecure":@(modal.TLS),
+                 
+                 @"proxy_host":modal.proxy_host,
+                 @"proxy_port":modal.proxy_port,
+                 @"proxy_username":modal.proxy_username,
+                 @"proxy_password":modal.password,
                 };
     }else if([modal.nodeName isEqualToString:@"openConnect"]){
         return @{@"type":@"openconnect",
@@ -51,7 +56,12 @@
                  @"mschap2_enable":@(modal.MSCHAP2),
                  @"pap_enable":@(modal.PAP),
                  @"allowInsecure":@(modal.TLS),
-                };
+                 
+                 @"proxy_host":modal.proxy_host,
+                 @"proxy_port":modal.proxy_port,
+                 @"proxy_username":modal.proxy_username,
+                 @"proxy_password":modal.password,
+                 };
     }
     return @{};
 }

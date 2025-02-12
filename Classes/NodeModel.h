@@ -18,6 +18,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSString * username;
 @property (nonatomic,copy) NSString * udpgw;
 @property (nonatomic,copy) NSString * udpgw_port;
+
+@property (nonatomic,copy) NSString * proxy_host;
+@property (nonatomic,copy) NSString * proxy_port;
+@property (nonatomic,copy) NSString * proxy_username;
+@property (nonatomic,copy) NSString * proxy_password;
+
 @property (nonatomic,assign) BOOL TLS;
 @property (nonatomic,assign) BOOL PAP;
 @property (nonatomic,assign) BOOL CHAP;
