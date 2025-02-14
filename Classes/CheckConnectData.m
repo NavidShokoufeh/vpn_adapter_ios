@@ -42,7 +42,7 @@
                  @"mschap2_enable":@(modal.MSCHAP2),
                  @"pap_enable":@(modal.PAP),
                  @"allowInsecure":@(modal.TLS),
-                 @"retryCount":@(modal.retryCount),
+                 @"retryCount":modal.retryCount,
         } mutableCopy];
 
          if (modal.proxy_host) {
@@ -70,7 +70,7 @@
                  @"mschap2_enable":@(modal.MSCHAP2),
                  @"pap_enable":@(modal.PAP),
                  @"allowInsecure":@(modal.TLS),
-                 @"retryCount":@(modal.retryCount),
+                 @"retryCount":modal.retryCount,
         } mutableCopy];
 
          if (modal.proxy_host) {
