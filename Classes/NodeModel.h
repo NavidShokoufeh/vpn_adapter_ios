@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSString * proxy_username;
 @property (nonatomic,copy) NSString * proxy_password;
 
+@property (nonatomic,copy) NSString * retryCount;
+
 @property (nonatomic,assign) BOOL TLS;
 @property (nonatomic,assign) BOOL PAP;
 @property (nonatomic,assign) BOOL CHAP;
