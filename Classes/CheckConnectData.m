@@ -61,7 +61,7 @@
         return [params copy];
     }else if([modal.nodeName isEqualToString:@"openConnect"]){
        NSMutableDictionary *params = [@{
-                 @"type":@"sstp",
+                 @"type":@"openConnect",
                  @"username":modal.username,
                  @"password":modal.password,
                  @"address":modal.server,
