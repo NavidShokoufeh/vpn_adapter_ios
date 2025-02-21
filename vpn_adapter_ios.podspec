@@ -14,7 +14,7 @@ Vpn utils for ios native.
   s.author           = { 'Navid Shokoufeh' => 'Navidshokoufeh.dev@gmail.com.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
-  s.public_header_files = 'Classes/**/*.h', 'include/tun2socks.h'
+  s.public_header_files = ['Classes/**/*.h', 'include/tun2socks.h']
   s.static_framework = true
   s.platform = :ios, '15.0'
   s.preserve_path = ['include/ExtParser.framework','include/openconnect.framework','include/SshLib.framework']
