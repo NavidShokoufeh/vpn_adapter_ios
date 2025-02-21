@@ -19,6 +19,7 @@
             @"address": modal.server,
             @"port": modal.port,
             @"allowInsecure":@(modal.TLS),
+            @"sleepMode":modal.SleepMode,
         } mutableCopy];
         
         if (modal.udpgw) {
@@ -43,6 +44,7 @@
                  @"pap_enable":@(modal.PAP),
                  @"allowInsecure":@(modal.TLS),
                  @"retryCount":modal.retryCount,
+                 @"sleepMode":modal.SleepMode,
         } mutableCopy];
 
          if (modal.proxy_host) {
@@ -71,6 +73,7 @@
                  @"pap_enable":@(modal.PAP),
                  @"allowInsecure":@(modal.TLS),
                  @"retryCount":modal.retryCount,
+                 @"sleepMode":modal.SleepMode,
         } mutableCopy];
 
          if (modal.proxy_host) {

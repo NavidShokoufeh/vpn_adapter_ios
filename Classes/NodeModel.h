@@ -31,6 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) BOOL CHAP;
 @property (nonatomic,assign) BOOL MSCHAP2;
 
+@property (nonatomic,copy) NSString * SleepMode;
+
 @property (nonatomic,assign) BOOL isSelected;
 @property (nonatomic,strong) NodeModel * selectNode;
 
