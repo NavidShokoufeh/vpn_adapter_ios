@@ -20,7 +20,7 @@ Vpn utils for ios native.
   s.preserve_path = ['include/ExtParser.framework','include/openconnect.framework','include/SshLib.framework']
   s.vendored_frameworks  = ['include/ExtParser.framework','include/openconnect.framework','include/SshLib.framework']
 
-  s.vendored_libraries = "**/*.a"
+  s.vendored_libraries = "Classes/liblibtun2socks.a"
 
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386'}
 end
