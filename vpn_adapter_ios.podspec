@@ -17,7 +17,7 @@ Vpn utils for ios native.
   s.public_header_files = 'Classes/**/*.h'
   s.static_framework = true
   s.platform = :ios, '15.0'
-  s.preserve_path = ['include/ExtParser.framework','include/openconnect.framework','include/SshLib.framework','include/tun2socks.h']
+  s.preserve_path = ['include/ExtParser.framework','include/openconnect.framework','include/SshLib.framework','include/*']
   s.vendored_frameworks  = ['include/ExtParser.framework','include/openconnect.framework','include/SshLib.framework']
 
   s.vendored_libraries = "**/*.a"
